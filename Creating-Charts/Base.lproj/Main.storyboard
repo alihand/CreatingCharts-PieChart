@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Creating_Charts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjv-Ai-s1B" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="398" width="374" height="414"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="macOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi6-gf-Zun">
+                                <rect key="frame" x="300" y="136" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-Qa-J7E">
+                                <rect key="frame" x="86" y="137" width="27" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5HM-6e-gC8">
+                                <rect key="frame" x="52" y="189" width="94" height="29"/>
+                                <connections>
+                                    <action selector="changeIOS:" destination="BYZ-38-t0r" eventType="valueChanged" id="rAC-ZW-F40"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JoE-rq-Wm3">
+                                <rect key="frame" x="281" y="189" width="94" height="29"/>
+                                <connections>
+                                    <action selector="changeMac:" destination="BYZ-38-t0r" eventType="valueChanged" id="EA6-Tm-y9K"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Device Buying Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqo-BQ-Ojx">
+                                <rect key="frame" x="86" y="340" width="243" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5HM-6e-gC8" firstAttribute="top" secondItem="NaN-Qa-J7E" secondAttribute="bottom" constant="31" id="57k-bI-Jwz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JoE-rq-Wm3" secondAttribute="trailing" constant="39" id="5PA-dH-OOB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iqo-BQ-Ojx" secondAttribute="trailing" constant="85" id="6FX-QU-kj2"/>
+                            <constraint firstItem="gjv-Ai-s1B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dcz-T1-ceF"/>
+                            <constraint firstItem="iqo-BQ-Ojx" firstAttribute="top" secondItem="JoE-rq-Wm3" secondAttribute="bottom" constant="122" id="GPL-0G-Zbg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gjv-Ai-s1B" secondAttribute="trailing" constant="20" id="MF9-ql-2AH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vi6-gf-Zun" secondAttribute="trailing" constant="58" id="MZH-GX-5m2"/>
+                            <constraint firstItem="iqo-BQ-Ojx" firstAttribute="top" secondItem="5HM-6e-gC8" secondAttribute="bottom" constant="122" id="ZLE-dP-8ei"/>
+                            <constraint firstItem="iqo-BQ-Ojx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="cwM-QV-tH3"/>
+                            <constraint firstItem="vi6-gf-Zun" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="hU0-zv-rJr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gjv-Ai-s1B" secondAttribute="bottom" constant="50" id="lyI-Bp-V5d"/>
+                            <constraint firstItem="NaN-Qa-J7E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="m18-Je-tiZ"/>
+                            <constraint firstItem="gjv-Ai-s1B" firstAttribute="top" secondItem="iqo-BQ-Ojx" secondAttribute="bottom" constant="41" id="o1C-Mf-J9L"/>
+                            <constraint firstItem="NaN-Qa-J7E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="tnb-Ln-BzF"/>
+                            <constraint firstItem="5HM-6e-gC8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="xqq-dc-1Ou"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="iosStepper" destination="5HM-6e-gC8" id="RxA-lb-eK3"/>
+                        <outlet property="macosStepper" destination="JoE-rq-Wm3" id="26A-5E-KM0"/>
+                        <outlet property="pieChart" destination="gjv-Ai-s1B" id="7wT-A6-MlX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+</document>
